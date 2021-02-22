@@ -15,7 +15,7 @@ func main() {
 
 		f := fib()
 
-		res := &response{Message: "Alex test Codepipline with EKS!"}
+		res := &response{Message: "Alex test Codepipline with manual approval!"}
 
 		for _, e := range os.Environ() {
 			pair := strings.Split(e, "=")
