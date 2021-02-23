@@ -20,7 +20,7 @@ phases:
 
   post_build:
     commands:
-      - docker push 290455323267.dkr.ecr.ap-east-1.amazonaws.com/eksws-codepipeline-ecrdockerrepository-xquxsorqvw4t:latest
+      - docker push 290455323267.dkr.ecr.ap-east-1.amazonaws.com/eksws-codepipeline-ecrdockerrepository-xquxsorqvw4t:$TAG
 #      - docker push $REPOSITORY_URI:$TAG
       - CREDENTIALS=$(aws sts assume-role --role-arn $EKS_KUBECTL_ROLE_ARN --role-session-name codebuild-kubectl --duration-seconds 900)
       - export AWS_ACCESS_KEY_ID="$(echo ${CREDENTIALS} | jq -r '.Credentials.AccessKeyId')"
