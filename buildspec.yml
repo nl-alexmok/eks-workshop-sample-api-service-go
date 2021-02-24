@@ -12,7 +12,7 @@ phases:
       - pip install --upgrade --user awscli
       - apt-get update
       - apt-get -y install jq
-      - apt-get install python3-pip
+      - apt-get -y install python3-pip
   pre_build:
       commands:
         - TAG="$REPOSITORY_NAME.$REPOSITORY_BRANCH.$ENVIRONMENT_NAME.$(date +%Y-%m-%d.%H.%M.%S).$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
