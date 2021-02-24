@@ -10,8 +10,7 @@ phases:
 #       - apt-get update && apt-get -y install jq python3-pip python3-dev && pip3 install --upgrade awscli
       - aws --version
       - pip install --upgrade --user awscli
-      - sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-      - sudo yum install jq -y
+      - apt-get -y install jq
       - jq -Version
   pre_build:
       commands:
