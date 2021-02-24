@@ -10,6 +10,7 @@ phases:
 #       - apt-get update && apt-get -y install jq python3-pip python3-dev && pip3 install --upgrade awscli
       - aws --version
       - pip install --upgrade --user awscli
+      - apt-get update
       - apt-get -y install jq
       - jq -Version
   pre_build:
